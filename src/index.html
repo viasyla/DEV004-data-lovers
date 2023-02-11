@@ -2,11 +2,123 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos Olimpicos Rio Jainero 2016</title>
+    <link rel="stylesheet" href="styleindex.css" />
+    
   </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <!-- Cabecera de la pagina -->
+    <header>
+      <div class="man-header">
+        <div class="logo"><img class="logo-header" src="imagenes/rio2.png" width="100" height="100"  ></div>
+        <!-- <div class="title-home">Juegos Olimpicos</div> -->
+      </div>
+    </header>
+    <!-- ********************** -->
+    <main class="photos">
+      <section class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <input type="radio" name="radio-btn" id="radio5">
+          <input type="radio" name="radio-btn" id="radio6">
+  
+          <div class="slide first"><img src="./imagenes/carrusel/canada.png"></div>
+          <div class="slide"><img src="./imagenes/carrusel/china.png"></div>
+          <div class="slide"><img src="./imagenes/carrusel/espana.png"></div>
+          <div class="slide"><img src="./imagenes/carrusel/india.png"></div>
+          <div class="slide"><img src="./imagenes/carrusel/tailandia.png"></div>
+          <div class="slide"><img src="./imagenes/carrusel/todas.png"></div>
+        </div>
+  
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+          <label for="radio5" class="manual-btn"></label>
+          <label for="radio6" class="manual-btn"></label>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+    <main class="photos">
+      <section class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn"  id="radio1">
+          <input type="radio" name="radio-btn"  id="radio2">
+          <input type="radio" name="radio-btn"  id="radio3">
+          <input type="radio" name="radio-btn"  id="radio4">
+
+          <div class="slide first"> <img src="./imagenes/carrusel/canada.png"> </div>
+          <div class="slide"> <img src="./imagenes/carrusel/china.png">  </div>
+          <div class="slide"> <img src="./imagenes/carrusel/espana.png"> </div>
+          <div class="slide"> <img src="./imagenes/carrusel/india.png">  </div>
+        </div>
+      
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label> -->
+          <!-- <label for="radio5" class="manual-btn"></label>
+          <label for="radio6" class="manual-btn"></label> -->
+        <!-- </div> -->
+
+
+      <!-- </section> -->
+      <!-- carrusel con imagenes -->
+    
+    
+    
+    
+    
+    
+    
+    
+      <!-- Texto de Introduccion de los juegos olimpicos -->
+      <section class="informacion-texto">
+        <p class="parrafo1">Sean bienvenidos a los Juegos Olimpicos Rio 2016!</p>
+        <p class="parrafo2">Introducir texto de los juegos olimpicos</p>
+      </section>
+      <!-- ********************** -->
+    
+    
+    
+    
+    
+      <div id="root"></div>
+      <p>Selecciona el pais a buscar.</p>
+      <select id="mySelect">
+    
+    
+      </select>
+    
+    
+    </main>
+
+    
+    
+
+
+
+    <!-- <script type="text/javascript" src="/data/athletes/athletes.js"></script> -->
+    <!-- aqui script index.js llamo al contador del tiempo de transicion ente las imagenes del carrusel -->
+    <script src="index.js" type="module"></script> 
   </body>
 </html>
