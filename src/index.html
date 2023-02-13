@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="es"> <!-- siempre se debe ingresar el tipo de lenguaje de la pagina. --> 
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juegos Olimpicos Rio Jainero 2016</title>
-    <link rel="stylesheet" href="styleindex.css" />
+    <meta charset="utf-8">  <!--  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- permite que sea respnsiva y que se acomode a cualquier tipo de dispositivo -->
+
+    <link rel="shortcut icon" href="Imagenes/logo web/logo.png" type="image/x-icon"> <!-- insertar mini-logo en pestaña de inicio -->
+    <title>Juegos Olimpicos Rio Jainero 2016</title> <!-- nombre pestaña inicio -->
+    <link rel="stylesheet" href="indexstyle.css" />
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
     
   </head>
   <body>
     <!-- Cabecera de la pagina -->
     <header>
       <div class="man-header">
-        <div class="logo"><img class="logo-header" src="imagenes/rio2.png" width="100" height="100"  ></div>
+        <div class="logo"><img class="logo-header" src="imagenes/generales/rio2.png" width="100" height="100" alt="" ></div>
         <!-- <div class="title-home">Juegos Olimpicos</div> -->
       </div>
     </header>
     <!-- ********************** -->
-    <main class="photos">
+    <main class="imagenes">
+
+       <!-- Seccion carrusel con imagenes -->
       <section class="slider">
         <div class="slides">
           <input type="radio" name="radio-btn" id="radio1">
@@ -27,11 +33,11 @@
           <input type="radio" name="radio-btn" id="radio6">
   
           <div class="slide first"><img src="./imagenes/carrusel/canada.png"></div>
-          <div class="slide"><img src="./imagenes/carrusel/china.png"></div>
-          <div class="slide"><img src="./imagenes/carrusel/espana.png"></div>
-          <div class="slide"><img src="./imagenes/carrusel/india.png"></div>
-          <div class="slide"><img src="./imagenes/carrusel/tailandia.png"></div>
-          <div class="slide"><img src="./imagenes/carrusel/todas.png"></div>
+          <div class="slide"><img src="./imagenes/carrusel/china.png" width="" alt=""></div>
+          <div class="slide"><img src="./imagenes/carrusel/espana.png" width="" alt=""></div>
+          <div class="slide"><img src="./imagenes/carrusel/india.png" width="" alt=""></div>
+          <div class="slide"><img src="./imagenes/carrusel/tailandia.png" width="" alt=""></div>
+          <div class="slide"><img src="./imagenes/carrusel/todas.png" width="" alt=""></div>
         </div>
   
         <div class="navigation-manual">
@@ -44,63 +50,50 @@
         </div>
       </section>
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-    <main class="photos">
-      <section class="slider">
-        <div class="slides">
-          <input type="radio" name="radio-btn"  id="radio1">
-          <input type="radio" name="radio-btn"  id="radio2">
-          <input type="radio" name="radio-btn"  id="radio3">
-          <input type="radio" name="radio-btn"  id="radio4">
-
-          <div class="slide first"> <img src="./imagenes/carrusel/canada.png"> </div>
-          <div class="slide"> <img src="./imagenes/carrusel/china.png">  </div>
-          <div class="slide"> <img src="./imagenes/carrusel/espana.png"> </div>
-          <div class="slide"> <img src="./imagenes/carrusel/india.png">  </div>
-        </div>
-      
-        <div class="navigation-manual">
-          <label for="radio1" class="manual-btn"></label>
-          <label for="radio2" class="manual-btn"></label>
-          <label for="radio3" class="manual-btn"></label>
-          <label for="radio4" class="manual-btn"></label> -->
-          <!-- <label for="radio5" class="manual-btn"></label>
-          <label for="radio6" class="manual-btn"></label> -->
-        <!-- </div> -->
-
-
-      <!-- </section> -->
-      <!-- carrusel con imagenes -->
-    
-    
-    
-    
-    
-    
-    
     
       <!-- Texto de Introduccion de los juegos olimpicos -->
-      <section class="informacion-texto">
-        <p class="parrafo1">Sean bienvenidos a los Juegos Olimpicos Rio 2016!</p>
-        <p class="parrafo2">Introducir texto de los juegos olimpicos</p>
+      <section class="informativo">
+        <br><br>
+        <h2><p class="parrafo1">Sean bienvenidos a los Juegos Olimpicos Rio 2016!</p></h2>
+        <br><br>
+        <p class="parrafo2">**** Introducir texto de los juegos olimpicos***** </p>
+         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In egestas,
+          orci at elementum dictum, leo quam tincidunt nisi, non egestas dui velit sed enim.
+          Nullam volutpat tortor vitae neque fringilla, ac luctus magna viverra. Ut sit amet 
+          est ut justo vulputate bibendum. Sed vitae libero nisl. Nunc lacinia ultrices varius.
+          Ut congue mi eu semper mollis. Curabitur sit amet sem sit amet leo aliquam venenatis. 
+          In id magna ac dolor mattis placerat ac a justo. Sed quis libero vel sapien ullamcorper 
+          rhoncus. Donec non tempus sem. Nam enim erat, vehicula in leo nec, venenatis hendrerit velit.
+          Sed non orci porttitor, malesuada risus eget, vulputate arcu.
+        </p>
       </section>
       <!-- ********************** -->
+      
+    <section id="menu">
+      <nav class="nav-menu">
+        <button class="initial-button" onclick="window.location.href='./personagens.html'">Busca tu pais !!!</button>
+      </nav>
+    </section>
     
-    
-    
-    
+    <!-- <select class="filter" id="species-filter">
+      <option id="Espécie" selected disabled hidden>Espécie</option>
+
+<option value="Alien">&🐶	; Alien</option>
+      <option value="chile">&#127752; &#x1f1e8; &#x1f1f1;chile</option>
+      <option value="Cronenberg">&#127464; &#127473; Chile 2</option>
+      <option value="unknown">&#127988; Desconhecido</option>
+      <option value="Disease"><i class="em em-flag-cl" aria-role="presentation" aria-label="Chile Flag"></i>	; Doença</option>
+      <option value="Human">&#129485; Humano</option>
+      <option value="Humanoid">&#129503; Humanóide</option>
+      <option value="Mytholog">&#127993; Mitologia</option>
+      <option value="Parasite">&#128027; Parasita</option>
+      <option value="Poopybutthole">&#128169; Poopybutthole</option>
+      <option value="Robot">&#129302; Robô</option>
+      <option value="Vampire" >"Chile Flag", Vampiro &</option>
+      <i class="em em---1" aria-role="presentation" aria-label="THUMBS UP SIGN"></i>
+    </select>
+    <i class="em em-bird" aria-role="presentation" aria-label="BIRD"></i>
+    <i class="em em-flag-cl" aria-role="presentation" aria-label="Chile Flag"></i> -->
     
       <div id="root"></div>
       <p>Selecciona el pais a buscar.</p>

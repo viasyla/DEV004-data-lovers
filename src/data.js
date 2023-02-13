@@ -7,3 +7,8 @@ export const example = () => {
 export const anotherExample = () => {
   return 'OMG';
 };
+
+export const athetesPais = (infoAthetas, noc) => {
+  const namePais=infoAthetas.filter()
+  return 'example';
+};
