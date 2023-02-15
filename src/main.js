@@ -9,3 +9,7 @@ import data from './data/athletes/athletes.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(buscarNombre, data);
+
+
+
+
