@@ -1,6 +1,7 @@
 
 //aqui se deben agregar las demas importaciones
 import { buscarNombre,filtrarSexo } from './data.js'; //aqui se deben agregar las demas importaciones
+import athletes from './data/athletes/athletes.js';
 
 import data from './data/athletes/athletes.js';// importo toda la bbdd desde atletas.js, que ya fue exportada desde el .json a js
 
@@ -55,8 +56,203 @@ function mostrarResultadosFiltrarSexo() {
   }
 }
 
+// 
+
+// ORIGINAL
+function llenadoOpciones(options_list) {
+  let options = options_list; 
+  let modelList = document.getElementById("disciplinas-filtrar"); 
+//   const arraySports = []
+//   for (let index = 0; index < options.athletes.length; index++) {
+//     if(!arraySports.includes( options.athletes[index].sport))
+//   arraySports.push( options.athletes[index].sport)
+    
+//   }
+//   console.log(arraySports);
 
 
+//   for (let i in arraySports) {
+//   // for (let i in unico) { 
+// //console.log(options_list);
+//     // creamos un elemento de tipo option
+//     let opt = document.createElement("option");
+//     // le damos un valor
+//     opt.value = arraySports[i];
+//     // le ponemos un texto
+//     opt.textContent = arraySports[i];
+
+//     // lo agregamos al select
+//     modelList.options.add(opt);
+//   }
+  const arraySports = []
+  for (let index = 0; index < options.athletes.length; index++) {
+    if(!arraySports.includes( options.athletes[index].sport)){
+  arraySports.push( options.athletes[index].sport)
+  let opt = document.createElement("option");
+      // le damos un valor
+      opt.value = options.athletes[index].sport;
+      // le ponemos un texto
+      opt.textContent = options.athletes[index].sport;
+  
+      // lo agregamos al select
+      modelList.options.add(opt);
+    
+  }
+  console.log(arraySports);
+}
+}
+llenadoOpciones(athletes);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//PRUEBA2
+// function llenadoOpciones(lista_opciones) {
+//   var opciones = lista_opciones;
+// //  console.log('var opciones= '+opciones); 
+//   var modelList = document.getElementById("disciplinas-filtrar"); 
+
+  
+  
+//   if (opciones.athletes[i]||opciones.athletes[i]) {
+//     // console.log('var opciones[]= '+opciones.athletes[i]); 
+//   } else {
+    
+//   }
+//   for (var i in opciones.athletes) { 
+//     if (opciones.athletes[i]||opciones.athletes[i]) {
+//       console.log(opciones.athletes[i]);
+//       // i=i+1;
+//     } else {
+//        // creamos un elemento de tipo option
+//        var opt = document.createElement("option");
+//        // le damos un valor
+//        opt.value = opciones.athletes[i].athletes;
+//        // le ponemos un texto
+//        opt.textContent = opciones.athletes[i].sport;
+//        // lo agregamos al select
+//        modelList.opciones.add(opt);
+        
+//     }
+   
+//   }
+// }
+// llenadoOpciones(athletes);
+
+//PRUEBA3
+// function llenadoOpciones(options_list) {
+//   let options = options_list; 
+//   let modelList = document.getElementById("disciplinas-filtrar"); 
+//   // console.log('modelo lista = '+modelList); //me muestra el objeto html
+//   for (var i in  options.athletes) { 
+   
+//     // creamos un elemento de tipo option
+//     let opt = document.createElement("option");
+//     // console.log('var opt= '+opt.value);
+
+//     // le damos un valor
+//     opt.value = options.athletes[i].athletes;
+//     // console.log('var options= '+options.athletes[i]);
+//   //  console.log('opt.value = '+options.athletes[i].athletes);
+   
+//     // le ponemos un texto
+//     opt.textContent = options.athletes[i].sport;
+//     console.log('opt.texContent = '+options.athletes[i].sport);//me muestra los datos del array
+//     // console.log('opt.texContent = '+opt.texContent);
+
+//     let lista_atleta = [options.athletes[i].sport]
+//     //   {name: "paco", edad:23},
+//     //   {name: "paco", edad:23},
+//     //   {name: "pepe", edad:25},
+//     //   {name: "paco", edad:23},
+//     //   {name: "lucas", edad:30},
+//     //   {name: "paco", edad:23}
+//     // ];
+    
+//     let sport = athletes.map(function (lista_atleta) { return lista_atleta.sport; });
+//     var sorted = sport.sort();
+    
+//     var unique = sorted.filter(function (value, index) {
+//       return value !== sorted[index + 1];
+//     });
+    
+//     console.log('unique= '+unique);
+
+
+//     // lo agregamos al select
+//     modelList.options.add(opt);
+//   }
+// }
+// llenadoOpciones(athletes);
+
+
+
+
+
+
+// let persona =[athletes]
+// console.log('lista atletas = '+persona);
+// //   {name: "paco", edad:23},
+// //   {name: "paco", edad:23},
+// //   {name: "pepe", edad:25},
+// //   {name: "paco", edad:23},
+// //   {name: "lucas", edad:30},
+// //   {name: "paco", edad:23}
+// // ];
+
+// let names = persona.map(function (persona) { return persona.sport; });
+// console.log('sport = '+names);
+// let sorted = names.sort();
+
+// let unique = sorted.filter(function (value, index) {
+//   return value !== sorted[index + 1];
+// });
+
+// console.log('unique= '+unique);
+
+
+// let ff=[athletes.year]
+// console.log('lista años = '+ff);
+
+// let deporte =[athletes.sport]
+// console.log('lista atletas = '+deporte);
+
+// let names = deporte.map(function (nada) { 
+//          return nada; 
+// });
+// console.log('sport = '+names);
+
+
+// let sorted = deporte.sort();
+
+// let unico = sorted.filter(function (value, index) {
+//   return value !== sorted[index + 1];
+// });
+
+// console.log('unique= '+unico);
 
 
 
