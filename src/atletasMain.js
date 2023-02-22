@@ -1,6 +1,6 @@
 
 //aqui se deben agregar las demas importaciones
-import { buscarNombre,filtrarSexo } from './data.js'; //aqui se deben agregar las demas importaciones
+import { buscarNombre,filtrarSexo,filtrarDisciplina } from './data.js'; //aqui se deben agregar las demas importaciones
 import athletes from './data/athletes/athletes.js';
 
 import data from './data/athletes/athletes.js';// importo toda la bbdd desde atletas.js, que ya fue exportada desde el .json a js
@@ -9,33 +9,86 @@ import data from './data/athletes/athletes.js';// importo toda la bbdd desde atl
 const infoAtletas = data.athletes.slice(0,10);//esta var me muestra todos los datos de los atletas//Guardo los resultados de la data del js en una variable
 const buscarNombrePersona=document.getElementById("busqueda");//asigno a var buscarNombreAtleta el input que se encuentra en html por medio del id"busqueda"
 const seleccionarSexoAtleta=document.getElementById("sexo-filtrar"); //se coloca eñ id del select en html
+const seleccionarDisciplina=document.getElementById("disciplinas-filtrar");
 //console.log(buscarNombre, data);
 
 //Escucha de las acciones
 buscarNombrePersona.addEventListener("keyup",buscarPorNombre);
-seleccionarSexoAtleta.addEventListener("change",mostrarResultadosFiltrarSexo); //depuesde crear la funcion afredo el nombre de ella despues del change
-
+seleccionarSexoAtleta.addEventListener("change",mostrarResultadosFiltrarSexo); //depues de crear la funcion agrego el nombre de ella despues del change
+seleccionarDisciplina.addEventListener("change",mostrarResultadosFiltrarDisciplina);
 // <!-- ** tarjetas  -->
 //me traigo las datos de la bbdd y creo desde atletasMain.js items en el HTML para visualizarlos. 
 function printCards(data) {
-    document.getElementById("cards-container").innerHTML = data.map((item) =>
-      ` <section class="box"> 
-          <h3 class="nombre"> ${item.name}</h3>
-            <div class="card-info"> 
-            <p><strong>Sexo: </strong>${item.gender}</p>
-            <p><strong>altura: </strong>${item.height}</p>
-            <p><strong>peso: </strong>${item.weight}</p>
-            <p><strong>disciplina: </strong>${item.sport}</p>
-            <p><strong>grupo: </strong>${item.team}</p>
-            <p><strong>pais: </strong>${item.noc}</p>
-            <p><strong>edad: </strong>${item.age}</p>
-            <p><strong>especialidad: </strong>${item.event}</p>
-            <p><strong>medalla(s): </strong>${item.medal}.</p>  
-          </div>
-        </section>
-      ` ).join('');
-  }
-  printCards(infoAtletas);
+  document.getElementById("cards-container").innerHTML = data.map((item) =>
+  `<section class="caja">
+  <figure>
+     <h2 class="nombre">${item.name}</h2>
+     <img class="frontal" src="Imagenes/generales/rio2.png" width="300" height="350" alt="" >
+        <figcaption class="trasera">
+           <div class="infotarjetas">
+               <p class="tamaño-parrafo" ><strong class="tamaño-texto"> Sexo: </strong> ${item.gender} </p>
+               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Altura: </strong> ${item.height} </p>
+               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Peso: </strong> ${item.weight} </p>
+               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Disciplina: </strong> ${item.sport} </p>
+               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Equipo: </strong> ${item.team} </p>
+               <p class="tamaño-parrafo"><strong class="tamaño-texto"> País: </strong> ${item.noc} </p>
+               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Edad: </strong> ${item.age} </p>
+               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Especialidad: </strong> ${item.event} </p>
+               <p class="tamaño-parrafo"><strong class="tamaño-texto"> Medalla: </strong> ${item.medal} </p>
+           </div>
+       </figcaption>
+   </figure>
+
+</section>
+    `).join('');
+}
+printCards(infoAtletas);
+
+// function imprimirData (data){
+//   document.getElementById("contenedor-tarjetas").innerHTML=data.map((item)=>
+//     `<section class="caja">
+//            <figure>
+//               <h2 class="nombre">${item.name}</h2>
+//               <img class="frontal" src="Imagenes/generales/rio2.png" width="300" height="350" alt="" >
+//                  <figcaption class="trasera">
+//                     <div class="infotarjetas">
+//                         <p class="tamaño-parrafo" ><strong class="tamaño-texto"> Sexo: </strong> ${item.gender} </p>
+//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Altura: </strong> ${item.height} </p>
+//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Peso: </strong> ${item.weight} </p>
+//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Disciplina: </strong> ${item.sport} </p>
+//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Equipo: </strong> ${item.team} </p>
+//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> País: </strong> ${item.noc} </p>
+//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Edad: </strong> ${item.age} </p>
+//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Especialidad: </strong> ${item.event} </p>
+//                         <p class="tamaño-parrafo"><strong class="tamaño-texto"> Medalla: </strong> ${item.medal} </p>
+//                     </div>
+//                 </figcaption>
+//             </figure>
+       
+//     </section>
+//     `).join("");// se creó un subtitulo "nombre", extrayendo del athletes.js
+// }
+// imprimirData(infoAtletas);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //*************************** */
 
 // FUNCION BUSCAR NOMBRE DEL ATLETA EN BUSCADOR
@@ -56,54 +109,57 @@ function mostrarResultadosFiltrarSexo() {
   }
 }
 
-// 
-
-// ORIGINAL
+// FUNCION FILTRAR DISCIPLINA Y LLENADO DEL FILTRO DINAMICAMENTE
+// ORIGINAL LLENADO DINAMICO DEL FILTRO(html) BOX
 function llenadoOpciones(options_list) {
-  let options = options_list; 
-  let modelList = document.getElementById("disciplinas-filtrar"); 
-//   const arraySports = []
-//   for (let index = 0; index < options.athletes.length; index++) {
-//     if(!arraySports.includes( options.athletes[index].sport))
-//   arraySports.push( options.athletes[index].sport)
-    
-//   }
-//   console.log(arraySports);
+  let options = options_list;
+  let modelList = document.getElementById("disciplinas-filtrar");
+  //   const arraySports = []
+  //   for (let index = 0; index < options.athletes.length; index++) {
+  //     if(!arraySports.includes( options.athletes[index].sport))
+  //   arraySports.push( options.athletes[index].sport)
+
+  //   }
+  //   console.log(arraySports);
 
 
-//   for (let i in arraySports) {
-//   // for (let i in unico) { 
-// //console.log(options_list);
-//     // creamos un elemento de tipo option
-//     let opt = document.createElement("option");
-//     // le damos un valor
-//     opt.value = arraySports[i];
-//     // le ponemos un texto
-//     opt.textContent = arraySports[i];
+  //   for (let i in arraySports) {
+  //   // for (let i in unico) { 
+  // //console.log(options_list);
+  //     // creamos un elemento de tipo option
+  //     let opt = document.createElement("option");
+  //     // le damos un valor
+  //     opt.value = arraySports[i];
+  //     // le ponemos un texto
+  //     opt.textContent = arraySports[i];
 
-//     // lo agregamos al select
-//     modelList.options.add(opt);
-//   }
+  //     // lo agregamos al select
+  //     modelList.options.add(opt);
+  //   }
   const arraySports = []
   for (let index = 0; index < options.athletes.length; index++) {
-    if(!arraySports.includes( options.athletes[index].sport)){
-  arraySports.push( options.athletes[index].sport)
-  let opt = document.createElement("option");
+    if (!arraySports.includes(options.athletes[index].sport)) {
+      arraySports.push(options.athletes[index].sport)
+      let opt = document.createElement("option");
       // le damos un valor
       opt.value = options.athletes[index].sport;
       // le ponemos un texto
       opt.textContent = options.athletes[index].sport;
-  
+
       // lo agregamos al select
       modelList.options.add(opt);
-    
+
+    }
+   // console.log(arraySports);
   }
-  console.log(arraySports);
-}
 }
 llenadoOpciones(athletes);
 
-
+function mostrarResultadosFiltrarDisciplina(event){
+  const valorSeleccionadoDisciplina=seleccionarDisciplina.value;
+  const seleccionDisciplina=filtrarDisciplina(infoAtletas,valorSeleccionadoDisciplina);
+  printCards(seleccionDisciplina);
+}
 
 
 

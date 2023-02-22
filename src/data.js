@@ -12,10 +12,10 @@ export const filtrarSexo = (infoAtletas, gender) => {
   const resultadoSexo = infoAtletas.filter((atleta) => atleta.gender.toLowerCase() === gender.toLowerCase());
   return resultadoSexo;
 };
-// Filtrar por Sexo //La var filtrarSexo se debe llevar al main.js y agregar en el import
+// Filtrar por Disciplina //La var filtrarDisciplina se debe llevar al main.js y agregar en el import
 export const filtrarDisciplina = (infoAtletas, sport) => {
-  const resultadoSexo = infoAtletas.filter((atleta) => atleta.gender.toLowerCase() === gender.toLowerCase());
-  return resultadoSexo;
+  const resultadoDisciplina = infoAtletas.filter((atleta) => atleta.sport.toLowerCase() === sport.toLowerCase());
+  return resultadoDisciplina;
 };
 
 // export const athetesPais = (infoAthetas, noc) => {
