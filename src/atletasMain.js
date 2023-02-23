@@ -1,6 +1,6 @@
 
 //aqui se deben agregar las demas importaciones
-import { buscarNombre,filtrarSexo,filtrarDisciplina } from './data.js'; //aqui se deben agregar las demas importaciones
+import { buscarNombre,filtrarSexo,filtrarDisciplina,filtrarEspecialidad,filtrarMedalla,filtrarPais } from './data.js'; //aqui se deben agregar las demas importaciones
 import athletes from './data/athletes/athletes.js';
 
 import data from './data/athletes/athletes.js';// importo toda la bbdd desde atletas.js, que ya fue exportada desde el .json a js
@@ -8,14 +8,22 @@ import data from './data/athletes/athletes.js';// importo toda la bbdd desde atl
 //Declaracion de variables
 const infoAtletas = data.athletes.slice(0,10);//esta var me muestra todos los datos de los atletas//Guardo los resultados de la data del js en una variable
 const buscarNombrePersona=document.getElementById("busqueda");//asigno a var buscarNombreAtleta el input que se encuentra en html por medio del id"busqueda"
-const seleccionarSexoAtleta=document.getElementById("sexo-filtrar"); //se coloca eñ id del select en html
-const seleccionarDisciplina=document.getElementById("disciplinas-filtrar");
+const seleccionarSexoAtleta=document.getElementById("sexo-filtrar"); //se coloca el id del select en html
+const seleccionarDisciplina=document.getElementById("disciplinas-filtrar");//se coloca el id del select en html
+const seleccionarEspecialidad=document.getElementById("especialidad-filtrar");//se coloca el id del select en html
+const seleccionarMedalla=document.getElementById("medalla-filtrar");
+const seleccionarPais=document.getElementById("pais-filtrar");
 //console.log(buscarNombre, data);
 
 //Escucha de las acciones
 buscarNombrePersona.addEventListener("keyup",buscarPorNombre);
 seleccionarSexoAtleta.addEventListener("change",mostrarResultadosFiltrarSexo); //depues de crear la funcion agrego el nombre de ella despues del change
 seleccionarDisciplina.addEventListener("change",mostrarResultadosFiltrarDisciplina);
+seleccionarEspecialidad.addEventListener("change",mostrarResultadosFiltrarEspecialidad);
+seleccionarMedalla.addEventListener("change",mostrarResultadosFiltrarMedalla);
+seleccionarPais.addEventListener("change",mostrarResultadosFiltrarPais);
+
+
 // <!-- ** tarjetas  -->
 //me traigo las datos de la bbdd y creo desde atletasMain.js items en el HTML para visualizarlos. 
 function printCards(data) {
@@ -74,21 +82,6 @@ printCards(infoAtletas);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //*************************** */
 
 // FUNCION BUSCAR NOMBRE DEL ATLETA EN BUSCADOR
@@ -110,32 +103,10 @@ function mostrarResultadosFiltrarSexo() {
 }
 
 // FUNCION FILTRAR DISCIPLINA Y LLENADO DEL FILTRO DINAMICAMENTE
-// ORIGINAL LLENADO DINAMICO DEL FILTRO(html) BOX
-function llenadoOpciones(options_list) {
+// ORIGINAL LLENADO DINAMICO DEL FILTRO DISCIPLINA(html) BOX
+function llenadoOpcionesDisciplinas(options_list) {
   let options = options_list;
   let modelList = document.getElementById("disciplinas-filtrar");
-  //   const arraySports = []
-  //   for (let index = 0; index < options.athletes.length; index++) {
-  //     if(!arraySports.includes( options.athletes[index].sport))
-  //   arraySports.push( options.athletes[index].sport)
-
-  //   }
-  //   console.log(arraySports);
-
-
-  //   for (let i in arraySports) {
-  //   // for (let i in unico) { 
-  // //console.log(options_list);
-  //     // creamos un elemento de tipo option
-  //     let opt = document.createElement("option");
-  //     // le damos un valor
-  //     opt.value = arraySports[i];
-  //     // le ponemos un texto
-  //     opt.textContent = arraySports[i];
-
-  //     // lo agregamos al select
-  //     modelList.options.add(opt);
-  //   }
   const arraySports = []
   for (let index = 0; index < options.athletes.length; index++) {
     if (!arraySports.includes(options.athletes[index].sport)) {
@@ -153,7 +124,7 @@ function llenadoOpciones(options_list) {
    // console.log(arraySports);
   }
 }
-llenadoOpciones(athletes);
+llenadoOpcionesDisciplinas(athletes);
 
 function mostrarResultadosFiltrarDisciplina(event){
   const valorSeleccionadoDisciplina=seleccionarDisciplina.value;
@@ -161,16 +132,136 @@ function mostrarResultadosFiltrarDisciplina(event){
   printCards(seleccionDisciplina);
 }
 
+// FUNCION FILTRAR ESPECIALIDAD Y LLENADO DEL FILTRO DINAMICAMENTE
+// ORIGINAL LLENADO DINAMICO DEL FILTRO ESPECIALIDAD(html) BOX
+// mostrarResultadosFiltrarEspecialidad
+function llenadoOpcionesEspecialidad(options_list) {
+  let options = options_list;
+  let modelList = document.getElementById("especialidad-filtrar");
+  const arrayEvent = [] //arrayEvent significa que es un arreglo de la especialidad (event es especiliadad en ingles y asi esta en el json athetes)
+  for (let index = 0; index < options.athletes.length; index++) {
+    if (!arrayEvent.includes(options.athletes[index].event)) {
+      arrayEvent.push(options.athletes[index].event)
+      let opt = document.createElement("option");
+      // le damos un valor
+      opt.value = options.athletes[index].event;
+      // le ponemos un texto
+      opt.textContent = options.athletes[index].event;
+
+      // lo agregamos al select
+      modelList.options.add(opt);
+
+    }
+   // console.log(arraySports);
+  }
+}
+llenadoOpcionesEspecialidad(athletes);
+
+function mostrarResultadosFiltrarEspecialidad(event){
+  const valorSeleccionadoEspecialidad=seleccionarEspecialidad.value;
+  const seleccionEspecialidad=filtrarEspecialidad(infoAtletas,valorSeleccionadoEspecialidad);
+  printCards(seleccionEspecialidad);
+}
+
+// FUNCION FILTRAR MEDALLA
+function mostrarResultadosFiltrarMedalla() {
+  const valorSeleccionadoMedalla=seleccionarMedalla.value;
+  const seleccionMedalla=filtrarMedalla(infoAtletas,valorSeleccionadoMedalla);
+  printCards(seleccionMedalla);
+}
+
+
+mostrarResultadosFiltrarPais
+
+// FUNCION FILTRAR ESPECIALIDAD Y LLENADO DEL FILTRO DINAMICAMENTE
+// ORIGINAL LLENADO DINAMICO DEL FILTRO ESPECIALIDAD(html) BOX
+// mostrarResultadosFiltrarEspecialidad
+// function llenadoOpcionesPais(options_list) {
+//   let options = options_list;
+//   let modelList = document.getElementById("pais-filtrar");
+//   const arrayPais = [] //arrayEvent significa que es un arreglo de la especialidad (event es especiliadad en ingles y asi esta en el json athetes)
+
+//   for (let index = 0; index < options.athletes.length; index++) {
+//     if (!arrayPais.includes(options.athletes[index].noc)) {
+//       arrayPais.push(options.athletes[index].noc);
+//       // arrayPais.sort();
+//     // console.log("arreglo = "+arrayPais);
+//       let opt = document.createElement("option");
+//       // le damos un valor
+//       opt.value = options.athletes[index].noc;
+//       // le ponemos un texto
+//       opt.textContent = options.athletes[index].noc;
+
+//       // lo agregamos al select
+//       modelList.options.add(opt);
+//     }
+//     }
+//    // console.log(arraySports);
+// }
+
+
+
+function llenadoOpcionesPais(options_list) {
+  let options = options_list;
+  let modelList = document.getElementById("pais-filtrar");
+  const arrayPais = [];
+
+  for (let index = 0; index < options.athletes.length; index++) {
+    if (!arrayPais.includes(options.athletes[index].noc)) {
+      arrayPais.push(options.athletes[index].noc);
+    }
+  }
+
+  // Ordenar el array alfabéticamente
+  arrayPais.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+  // Recorrer el array ordenado y agregar cada opción al select
+  for (let i = 0; i < arrayPais.length; i++) {
+    let opt = document.createElement("option");
+    opt.value = arrayPais[i];
+    opt.textContent = arrayPais[i];
+    modelList.options.add(opt);
+  }}
+llenadoOpcionesPais(athletes);
+
+
+function mostrarResultadosFiltrarPais(event){
+  const valorSeleccionadoPais=seleccionarPais.value;
+  const seleccionPais=filtrarPais(infoAtletas,valorSeleccionadoPais);
+  printCards(seleccionPais);
+}
+//  // Ordenar el array de país alfabéticamente
+//  arrayPais.sort();
+
+//  // Agregar opciones ordenadas al select
+//  for (let i = 0; i < arrayPais.length; i++) {
+//    let opt = document.createElement("option");
+//    opt.value = arrayPais[i];
+//    opt.textContent = arrayPais[i];
+//    // console.log(arrayPais); //al revisar se enuentra ordenado el arreglo
+//    modelList.appendChild(opt);
+//  }
 
 
 
 
+// const paises={
+//   1: 'España',
+//   2: 'Andorra',
+//   35:'Portugal'
+// }
 
+// const array=[];
 
+// for (let i in paises) {
+//   array.push({ id: i, nombre: paises[i]});
+// }
 
+// console.log(array);
 
+// array.sort((a,b) => a.nombre < b.nombre ? -1 : +(a.nombre > b.nombre));
 
-
+// console.log(array.map(a=>a.nombre));
 
 
 
