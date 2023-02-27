@@ -48,9 +48,9 @@ export const ordenAlfabetico = (infoAtletas, orden) => {
   }
 };
 
-export const calculatePercentage = (personsInfo, selectedFilter) => {
-  const resultPercentage = parseFloat((selectedFilter.length * 100) / personsInfo.length).toFixed(2);
-  return resultPercentage;
+export const calcularPorcentaje = (infoAtletas, seleccionar) => {
+  const resultadoPorcentaje = parseFloat((seleccionar.length * 100) / infoAtletas.length).toFixed(2);
+  return resultadoPorcentaje;
 };
 
 
