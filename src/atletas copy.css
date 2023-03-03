@@ -1,26 +1,3 @@
-/* DISEÑO MOBILE FIRST GALAXY A51/71 */
-body{
-padding: 0px;
-
-}
-
-#contenedor-portada>.logo-cabecera-uno {
-  /* padding: 5px; */
-  width: 100%;
-  height: 100px;
-  /* background-size: 100px; */
-  outline: 5px solid red;
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -31,11 +8,16 @@ padding: 0px;
   height: 100px;
   padding: 0.5px;
   height: 100px;
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
 
 }
 
-
+#contenedor-portada>.logo-cabecera-uno {
+  /* padding: 5px; */
+  width: 100%;
+  height: 100px;
+  /* background-size: 100px; */
+}
 
 #contenedor-portada>.logo-cabecera-dos {
   /* padding: 5px; */
@@ -55,24 +37,21 @@ padding: 0px;
   justify-content: flex-end;
   /* flex-direction: row-reverse; */
   /* outline: 2px solid yellow; */
-}
 
-/* .nav-menu-volver{
+}.nav-menu-volver{
   width: 25%;
   height: 100%;
   /* outline: 2px solid red; */
-  /* display: flex; */
-  /* flex-direction: row-reverse; */
-/* } */ 
+  display: flex;
+  flex-direction: row-reverse;
+}
 .btn-inicial{
-  width: 15%;
+  width: 50%;
   height: 100%;
   border-radius: 20px;
   border: 1px solid #00ffd5;
   background-color: #00ffd5;
-  display: flex;
-  
-  /* flex-direction: row-reverse;  */
+
 
   /* width: 100%; */
 }
