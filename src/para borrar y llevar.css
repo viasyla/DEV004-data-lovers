@@ -58,8 +58,29 @@ body {  /* Corresponde a la imagen de las banderas de fondo*/
   /* outline: 1px solid turquoise; */
 }
 
+#contenedor-cabecera>.logo-cabecera>.logo-cabecera-uno {
+  /* padding: 5px; */
+  width: 100%;
+  height: 100px;
+  /* background-size: 100px; */
+}
+#contenedor-cabecera>.logo-cabecera>.logo-cabecera-dos {
+  /* padding: 5px; */
+  width: 100px;
+  height: 100px;
+  display: flex;
 
-
+  position: relative;
+  top: -105px ;
+  
+  left: 48%;
+  /* display: block; */
+  /* display: flex;
+  justify-content: center;  */
+  
+  /* background-size: 100px; */
+  
+}
 /* ------------------------------ */
 
 
