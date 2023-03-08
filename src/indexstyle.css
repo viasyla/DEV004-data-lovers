@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 2px solid violet;
+  /* outline: 2px solid violet; */
 
 }
 header {
@@ -225,6 +225,16 @@ flex-direction: column;
 #contenedorMenu>.imagen-der {
   padding: 30px;
 }
+.gif-dos{
+  width:90%;
+  height:90%;
+  border-radius: 50%;
+  /* padding-left:30px; */
+}
+
+
+
+
 
 /* ------------------------------ */
 
@@ -286,7 +296,7 @@ flex-direction: column;
       align-items: center;
       /* margin-top: 20px; */
       flex-direction: column;
-      outline: 2px solid red;
+      /* outline: 2px solid red; */
 
     }
     .slider{ /*Caja que envuelve a Slider*/
@@ -333,7 +343,7 @@ flex-direction: column;
   width:98%;
   height: 20%;
   margin: 1%; /*Todos los margenes 4 lados*/
-  outline: 2px solid magenta;
+  /* outline: 2px solid magenta; */
 }
 .parrafo1{
   top: 12px;
@@ -371,7 +381,7 @@ flex-direction: column;
       margin: 1%; /*Todos los margenes 4 lados*/
       /* justify-content: space-between; */
       justify-content: space-around;
-      outline: 1px solid turquoise;
+      /* outline: 1px solid turquoise; */
     
     }
     
@@ -436,6 +446,10 @@ flex-direction: column;
     /*  SECCION FOOTER*/ 
     #fot {
       margin: 0.2;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: flex-end; */
+      align-items:center;
  }
     .footer{
       font-size: x-small;
@@ -524,15 +538,17 @@ flex-direction: column;
     }
     /* ------------------------------ */
     
+
+
     /* ======================================*/
     /*  SECCION FOOTER*/ 
 
  #fot {
-      height: 120px;
+      height: 30px;
       display: flex;
       outline: 1px solid green;
       align-items: flex-end;
-      justify-content: flex-end;
+      /* justify-content: flex-end; */
       flex-direction: column;
       margin: 1%;
  }
