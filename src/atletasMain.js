@@ -46,7 +46,7 @@ function printCards(data) {
                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> Equipo: </strong> ${item.team} </p>
                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> País: </strong> ${item.noc} </p>
                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> Edad: </strong> ${item.age} </p>
-                <p class="tamaño-parrafo"><strong class="tamaño-texto"> Especialidad: </strong> ${item.event} </p>
+                <p class="tamaño-parrafo"><strong class="tamaño-texto tex2"> Especialidad: </strong> ${item.event} </p>
                 <p class="tamaño-parrafo"><strong class="tamaño-texto"> Medalla: </strong> ${item.medal} </p>
               </div>
           </figcaption>

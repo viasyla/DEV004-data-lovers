@@ -273,7 +273,7 @@ figure .nombre{
     top: 0;
     padding: 0px;
     color: rgba(19, 17, 17, 0.925);
-    line-height: 52px;
+    /*line-height: 20px;*/ /*Interlineado*/
     /*************************************     VOLVER A ACTIVAR *************** */
     /* transform: perspective(600px) rotateY(180deg); */  
     backface-visibility: hidden;
@@ -285,12 +285,13 @@ figure .nombre{
 }
   .infotarjetas {
     width: 93%;
-    height: 150px;
-    margin-top: 20%;
+    height: 160px;
+    margin-top: 18%;
     margin-left: 4px;
     text-align: left;
     word-wrap: break-word;
     outline: 2px solid orangered;
+    /* line-height: 5px; */
 }
 
 
@@ -299,54 +300,29 @@ figure .nombre{
 .tamaño-texto{ /* el titulo de la actividad de la data */
   font-size:10px;
   font-weight: bold;
+  /* display: flex; */
+
   outline: 2px solid green;
 
 }
 
 .tamaño-parrafo{ /* la actividad que traemos de la data*/
+  /* display: flex; */
   font-size:10px;
-  line-height: 5px; /*interlineado*/
+line-height: 5px; /*interlineado*/
+ outline: 2px solid red;
+ /* padding: 2%; */
+
+}
+
+.tex2{
+line-height: 7px; /*interlineado*/
+
 }
 
 
 
 
-/* ************* SOLO COPIA DESPUES BORRAR *******************  */
-    figure{
-      width: 100%;
-      height:100%;
-      margin: 0;
-      position: relative;
-      border-radius: 26PX; /*50px;*/
-      transition: all ease .5s;
-      transform-style: preserve-3d; /*al ser 3d, los hijos igual tendran esta propiedad*/
-      transform: perspective(600px) rotateY(0deg); /*le da una perspectiva a la imagen, además de rotarla en el eje Y*/
-      box-shadow: 0px 2px 10px 2px;
-      outline: 2px solid blue;
-      display: flex;
-    
-    }
-    figure .nombre{
-      width: 96%;
-      height: 119px;
-      display: flex;
-      position: absolute;
-      top: 41%;
-      left: 49%;
-      transform: translate(-50%, -50%);
-      font-size: 82%;
-      text-align: center;
-      color: rgba(7, 6, 6, 0.925);
-      backface-visibility: hidden;
-      outline: 2px solid red;
-      flex-wrap: wrap;
-      flex-direction: row;
-      align-items: center;
-      align-content: center;
-      /* opacity: 0.2; */
-      /* border-radius: 0px; */
-      /* background-color: aquamarine; */
-      }
 /* *********************************************************** */
 
 
