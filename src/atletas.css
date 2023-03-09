@@ -275,7 +275,7 @@ figure .nombre{
     color: rgba(19, 17, 17, 0.925);
     /*line-height: 20px;*/ /*Interlineado*/
     /*************************************     VOLVER A ACTIVAR *************** */
-    /* transform: perspective(600px) rotateY(180deg); */  
+    transform: perspective(600px) rotateY(180deg);  
     backface-visibility: hidden;
     overflow: auto;
     background-color: rgb( 232, 248, 245 );
@@ -298,25 +298,38 @@ figure .nombre{
 
 
 .tamaño-texto{ /* el titulo de la actividad de la data */
-  font-size:10px;
+  font-size:11px;
   font-weight: bold;
   /* display: flex; */
 
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
 
 }
 
 .tamaño-parrafo{ /* la actividad que traemos de la data*/
   /* display: flex; */
-  font-size:10px;
-line-height: 5px; /*interlineado*/
- outline: 2px solid red;
+  /* height: 2px; */
+  font-size:11px;
+  margin: 2px;
+/*line-height: 5px; /*interlineado*/
+ /* outline: 2px solid red; */
  /* padding: 2%; */
 
 }
 
-.tex2{
-line-height: 7px; /*interlineado*/
+.texto1{
+  line-height: 7px; /*interlineado*/
+  
+  }
+
+.texto2{
+  /*line-height: 7px; /*interlineado*/
+  line-height: 1.5px;
+  word-wrap: break-word;
+
+
+ outline: 2px solid blue;
+
 
 }
 
