@@ -162,7 +162,9 @@ option{
   font-size: 75%;
   display: flex;
   align-content: center;
+  color: #FD2D1C; /* color scarlata*/
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 
@@ -312,6 +314,8 @@ figure .nombre{
 
 }
 
+
+
 /* ======================================*/
 /* ======================================*/
 @media screen and (min-width:455px){
@@ -414,17 +418,9 @@ option{ /* corresponde al tamaño de la letra dentro del option*/
 /* SECCION MOSTRAR RESULTADO DE PORCENYAJES DE LA SELECCION DESPLEGADA*/
 
 .porcentaje {
-  width: 99%;
   height: 45px;
-  margin: 0.5%;
   /* outline: 2px solid cornflowerblue; */
-  text-align: center;
   font-size: 20px;
-  color: #FD2D1C; /* color scarlata*/
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 
@@ -456,6 +452,8 @@ figure .nombre{
 }
 
 }
+
+
 
 /* ======================================*/
 /* ======================================*/
