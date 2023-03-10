@@ -1,7 +1,7 @@
 /* DISEÑO MOBILE FIRST GALAXY A51/71 */
 body{
 padding: 0px;
-  outline: 2px solid violet;
+  /* outline: 2px solid violet; */
 
 
 }
@@ -18,23 +18,23 @@ padding: 0px;
   flex-direction: column;
   align-content: center;
   justify-content: space-around;
-  outline: 2px solid blue;
+  /* outline: 2px solid blue; */
 }
 .logo-cabecera-dos {
-  /* padding: 0px 0px 0px 0px; */
   padding: 2.5px;
   width: 10%;
-  outline: 2px solid red;
+  max-width: 80px;
+  /* outline: 2px solid red; */
 }
 /*------------------------------------------------------------*/
 
-/* SECCION BOTON VOLVER*/
+/* SECCION BOTON VOLVER   CASITA */
 #menu-btn-volver {
   width: 100%;
   height: 20px;
   display: flex;
   justify-content: flex-end;
-  outline: 2px solid yellow;
+  /* outline: 2px solid yellow; */
   flex-wrap: wrap;
   flex-direction: row;
 }
@@ -42,15 +42,14 @@ padding: 0px;
   width: 6%;
   height: 99%;
   display: flex;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   padding: 0px;
   border: 0px;
-
-  /* justify-content: flex-end;  */
 } 
 
 #volver{
   width: 100%; /*tamaño de la casita*/
+  max-width: 34px ; /* **************************************************************** */
   height: 99%;
   display: flex;
   align-items: center;
@@ -79,7 +78,7 @@ padding: 0px;
   flex-wrap: wrap;
   align-content: flex-start;
   /* justify-content: space-around; */
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
 }
 /*------------------------------------*/
 /* seccion buscar*/
@@ -108,7 +107,7 @@ padding: 0px;
   padding: 0.4%;
   margin: 0%;
   /* display: block; */
-  outline: 1px solid  red;
+  /* outline: 1px solid  red; */
 }
 .texto{ /*Afecta solamente al texto de la etiqueta P de Genero/Disciplina/Especialidad/Medalla/Pais/Ordenar*/
   font-size: 75%;
@@ -121,7 +120,7 @@ padding: 0px;
   text-align: center;
   /* padding: 0.5%; */
   /* display: block; */
-  outline: 1px solid  black;
+  /* outline: 1px solid  black; */
 }
 .dos{
   width:100%;
@@ -133,7 +132,7 @@ padding: 0px;
   text-align: center;
   border: 1px solid #87f583;
   border-radius: 20px;
-   outline: 1px solid  yellow;
+   /* outline: 1px solid  yellow; */
 }
 .seccion-filtrar-disciplina{
   width: 18%;
@@ -158,7 +157,7 @@ option{
   width: 99%;
   height: 20px;
   margin: 0.5%;
-  outline: 2px solid cornflowerblue;
+  /* outline: 2px solid cornflowerblue; */
   text-align: center;
   font-size: 75%;
   display: flex;
@@ -176,7 +175,7 @@ main{
   margin-left: 0%;
   margin-right: 0%;
 
-  outline:2px solid blue;
+  /* outline:2px solid blue; */
   width: 99%;/*100%;*/
 
 }
@@ -190,18 +189,17 @@ main{
   flex-wrap: wrap; /* es para adecuarse al tamaño de lla pantalla*/
 
   align-content: center;
-  /* justify-content: space-between; */
   justify-content: center;
 
-  /* font-size:medium; */
-  outline: 2px solid turquoise;
+  /* outline: 2px solid turquoise; */
 }
 
 .caja{
   margin: 1%;
   width: 29%;
+  max-width: 150px;
   height: 200px; /*25%;*/
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
 
  }
  .caja:hover figure{ /*se pone el nombre del div + figure para que al seleccionar el primero, tome recien el segundo*/
@@ -221,7 +219,7 @@ figure{
   transform-style: preserve-3d; /*al ser 3d, los hijos igual tendran esta propiedad*/
   transform: perspective(600px) rotateY(0deg); /*le da una perspectiva a la imagen, además de rotarla en el eje Y*/
   box-shadow: 0px 2px 10px 2px;
-  outline: 2px solid blue;
+  /* outline: 2px solid blue; */
   display: flex;
 
 }
@@ -237,14 +235,11 @@ figure .nombre{
   text-align: center;
   color: rgba(7, 6, 6, 0.925);
   backface-visibility: hidden;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   align-content: center;
-  /* opacity: 0.2; */
-  /* border-radius: 0px; */
-  /* background-color: aquamarine; */
   }
 
 
@@ -253,19 +248,14 @@ figure .nombre{
   figure .trasera{
     width: 100%;
     height: 100%;
-    /* display: block; */
-    /* opacity: 0.2; */
-    /* border-radius: 50px; */
-    /* background-color: aquamarine; */
    }
    figure .frontal{
     display: block;
     backface-visibility:hidden;
     top: 0;
     opacity: 0.2;
-    /* background-color: rgba(114, 219, 140, 0.952) */
-    /* outline: 2px solid green; */
    }
+
    figure .trasera{
     width: 100%;
     height: 100%;
@@ -273,15 +263,14 @@ figure .nombre{
     top: 0;
     padding: 0px;
     color: rgba(19, 17, 17, 0.925);
-    /*line-height: 20px;*/ /*Interlineado*/
-    /*************************************     VOLVER A ACTIVAR *************** */
-    transform: perspective(600px) rotateY(180deg);  
+/* ****************** activar tarjeta delantera ********************** */
+    /* transform: perspective(600px) rotateY(180deg);   */
     backface-visibility: hidden;
     overflow: auto;
     background-color: rgb( 232, 248, 245 );
     border-radius: 26PX; /*50px;*/
 
-    outline: 2px solid green;
+    /* outline: 2px solid green; */
 }
   .infotarjetas {
     width: 93%;
@@ -290,8 +279,7 @@ figure .nombre{
     margin-left: 4px;
     text-align: left;
     word-wrap: break-word;
-    outline: 2px solid orangered;
-    /* line-height: 5px; */
+    /* outline: 2px solid orangered; */
 }
 
 
@@ -300,20 +288,11 @@ figure .nombre{
 .tamaño-texto{ /* el titulo de la actividad de la data */
   font-size:11px;
   font-weight: bold;
-  /* display: flex; */
-
-  /* outline: 2px solid green; */
-
 }
 
 .tamaño-parrafo{ /* la actividad que traemos de la data*/
-  /* display: flex; */
-  /* height: 2px; */
   font-size:11px;
   margin: 2px;
-/*line-height: 5px; /*interlineado*/
- /* outline: 2px solid red; */
- /* padding: 2%; */
 
 }
 
@@ -328,21 +307,181 @@ figure .nombre{
   word-wrap: break-word;
 
 
- outline: 2px solid blue;
+ /* outline: 2px solid blue; */
 
 
 }
 
+/* ======================================*/
+/* ======================================*/
+@media screen and (min-width:455px){
+ 
+  #contenedor-portada{
+    /* width: 100%; */
+    height: 120px;
+    /* outline: 2px solid blue; */
+  }
+  .logo-cabecera-dos {
+    height: 100px;
+    /* outline: 2px solid red; */
+  }
+
+/*------------------------------------------------------------*/
+
+/* SECCION BOTON VOLVER   CASITA */
+#menu-btn-volver {
+  height: 30px;
+}
+.btn-inicial{
+  width: 4%;
+  height: 99%;
+} 
+/*------------------------------------------------------------*/
 
 
 
-/* *********************************************************** */
+/*SECCION MENU ID=MENU -> area de seleccion de filtrdos*/
+#menu {
+  height:120px; /*70px;*/
+  /* outline: 2px solid violet; */
+}
+/*------------------------------------*/
+/* seccion buscar*/
+.seccion-buscar{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  /* outline: 1px solid red; */
+
+}
+.buscar{ /* CAMPO BUSCAR */
+  width: 60%;
+}
+
+/*------------------------------------*/
+
+.texto{ /*Afecta solamente al texto de la etiqueta P de Genero/Disciplina/Especialidad/Medalla/Pais/Ordenar*/
+  font-size: 100%;
+}
+.etiqueta{
+  width:96%;
+  height: 17px;
+  /* outline: 1px solid  black; */
+}
+.dos{
+  width:100%;
+  height: 40%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin: 2% 0%;;
+  font-size: 65%;
+  text-align: center;
+  border: 1px solid #87f583;
+  border-radius: 20px;
+   /* outline: 1px solid  yellow; */
+}
+.cambio1{
+  width:96%;
+  height: 17px;
+  padding-top: 1.387%;
+  padding-bottom: 1.597%;
+}
+.cambio2{
+  width:96%;
+  height: 17px;
+  padding-top: 1.387%;
+  padding-bottom: 0.7%;
+}
+.seccion-filtrar-genero,.seccion-filtrar-medalla,.seccion-filtrar-pais{ /*corresponde al espaciado de la seccion para que se vean bien desplegadas las categorias*/
+  width: 12%;
+}
+.seccion-filtrar-disciplina{ /*corresponde al espaciado de la seccion para que se vean bien desplegadas las categorias*/
+  width: 18%;
+}
+
+.seccion-filtrar-especialidad{ /*corresponde al espaciado de la seccion para que se vean bien desplegadas las categorias*/
+  width: 26%;
+}
+
+option{ /* corresponde al tamaño de la letra dentro del option*/ 
+  font-size: 110%;
+}
 
 
+/*------------------------------------------------------------*/
+
+/* SECCION MOSTRAR RESULTADO DE PORCENYAJES DE LA SELECCION DESPLEGADA*/
+
+.porcentaje {
+  width: 99%;
+  height: 45px;
+  margin: 0.5%;
+  /* outline: 2px solid cornflowerblue; */
+  text-align: center;
+  font-size: 20px;
+  color: #FD2D1C; /* color scarlata*/
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 
+/*------------------------------------------------------------*/
+/* MAIN*/
 
+.caja{
+  height: 250px; /*25%;*/
+  /* outline: 2px solid red; */
+ }
 
+figure .nombre{
+  font-size: 120%;
+  justify-content: center;
+  /* outline: 2px solid red; */
+  }
 
+.infotarjetas {
+  height: 200px;
+  /* outline: 2px solid orangered; */
+}
 
-/***************************Desarrollo ely *************************************/ 
+.tamaño-texto{ /* el titulo de la actividad de la data */
+  font-size:14px;
+}
+
+.tamaño-parrafo{ /* la actividad que traemos de la data*/
+   font-size:12px;
+}
+
+}
+
+/* ======================================*/
+/* ======================================*/
+@media screen and (min-width:1290px){ 
+/*SECCION MENU ID=MENU -> area de seleccion de filtrdos*/
+#menu {
+  height:140px; 
+  /* outline: 2px solid green; */
+}
+
+.caja{
+  height: 300px;
+  /* outline: 2px solid green; */
+ }
+
+.infotarjetas {
+  height: 250px;
+  /* outline: 2px solid orangered; */
+}
+
+.tamaño-texto{ /* el titulo de la actividad de la data */
+  font-size:16px;
+}
+
+.tamaño-parrafo{ /* la actividad que traemos de la data*/
+  font-size:14px;
+}
+
+}
